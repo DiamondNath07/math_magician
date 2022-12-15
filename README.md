@@ -37,11 +37,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [leaderBoard] <a name="about-project"></a>
+# 📖 [math_magician] <a name="about-project"></a>
 
 > This is a CRUD operation application that works with an API to perform basic 'create' and 'Read' function. It is built using webpack, vanilla javascrip, HTML&CSS and API
 
-**[leaderBoard]** is a CRUD operation application 
+**[math_magician]** is a CRUD operation application 
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -59,7 +59,7 @@
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://us-central1-js-capstone-backend.cloudfunctions.net/api/">Leaderboard.js</a></li>
+    <li><a href="https://us-central1-js-capstone-backend.cloudfunctions.net/api/">math_magician.js</a></li>
   </ul>
 </details>
 
@@ -83,7 +83,7 @@
 
 > View live here
 
-- [Live Demo Link](https://diamondnath07.github.io/leaderBoard/dist/)
+- [Live Demo Link](https://diamondnath07.github.io/math_magician/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -109,7 +109,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```
-https://github.com/DiamondNath07/leaderBoard
+https://github.com/DiamondNath07/math_magician
  
 ```
 
@@ -164,7 +164,7 @@ run npm start
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/DiamondNath07/leaderBoard/issues).
+Feel free to check the [issues page](https://github.com/DiamondNath07/math_magician/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
