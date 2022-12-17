@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './index.css';
+import React, { Component } from 'react';
+import '../styles/calculator.css';
 
 const buttons = [
   { val: 'AC', id: 1 },
@@ -23,15 +23,17 @@ const buttons = [
   { val: '=', id: 17 },
 ];
 
-const Calculator = () => {
-  const [result, setResult] = useState('0');
+export default class Calculator extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      result: '0',
+    };
+  }
 
-  const handleClick = (e) => {
-    setResult(result.concat(e.target.name));
-  };
-
-  return (
-    <>
+  render() {
+    const { result } = this.state;
+    return (
       <div className="container">
         <form>
           <input type="text" value={result} />
@@ -47,7 +49,6 @@ const Calculator = () => {
               && ${btn.val === '0' ? 'spanzero' : 'graybg'}`}
               key={btn.id}
               type="button"
-              onClick={handleClick}
               id="clear"
             >
               {btn.val}
@@ -55,8 +56,6 @@ const Calculator = () => {
           ))}
         </div>
       </div>
-    </>
-  );
-};
-
-export default Calculator;
+    );
+  }
+}

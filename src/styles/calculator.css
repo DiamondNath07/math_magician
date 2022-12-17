@@ -32,6 +32,7 @@ input[type='text'] {
   background-color: #858694;
   border: 0;
   color: #fff;
+  text-align: end;
 }
 
 .orangebg {
