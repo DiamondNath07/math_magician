@@ -20,8 +20,8 @@ const buttons = [
   { val: '3', id: 15 },
   { val: '+', id: 16 },
   { val: '0', id: 17 },
-  { val: '.', id: 18 },
-  { val: '=', id: 19 },
+  { val: '.', id: 17 },
+  { val: '=', id: 17 },
 ];
 
 export default class Calculator extends Component {
@@ -35,20 +35,23 @@ export default class Calculator extends Component {
   }
 
   handleClick = (e) => {
+    const num = buttons;
+    console.log(num);
     const data = e.target.value;
+    console.log(data);
     const state = calculate(this.state, data);
-    this.setState(state);
+    console.log(state);
   };
 
   render() {
     const { total, next, operation } = this.state;
     return (
       <div className="container">
-        <div>
+        <form>
           <input type="text" value={total} />
           {next}
           {operation}
-        </div>
+        </form>
         <div className="keypad">
           {buttons.map((btn) => (
             <button
@@ -62,7 +65,6 @@ export default class Calculator extends Component {
               key={btn.id}
               type="button"
               id="clear"
-              value={btn.val}
             >
               {btn.val}
             </button>
