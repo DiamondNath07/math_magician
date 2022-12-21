@@ -44,11 +44,11 @@ export default class Calculator extends Component {
     const { total, next, operation } = this.state;
     return (
       <div className="container">
-        <div>
-          <input type="text" value={total} />
-          {next}
+        <form>
+          {total}
           {operation}
-        </div>
+          {next}
+        </form>
         <div className="keypad">
           {buttons.map((btn) => (
             <button

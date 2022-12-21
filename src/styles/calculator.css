@@ -26,6 +26,15 @@ body {
   grid-auto-rows: minmax(60px, auto);
 }
 
+form {
+  height: 70px;
+  background-color: #858694;
+  text-align: end;
+  padding: 20px 20px 0 0;
+  color: #fff;
+  font-size: 28px;
+}
+
 input[type='text'] {
   height: 75px;
   width: 100%;
