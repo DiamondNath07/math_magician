@@ -32,11 +32,11 @@ function Calculatur() {
     next: null,
     operation: null,
   });
-  const [total, next, operation] = obj;
+  const { total, next, operation } = obj;
 
   const handleClick = (e) => {
     const data = e.target.value;
-    const result = calculate(result, data);
+    const result = calculate(obj, data);
     setObj(result);
   };
   return (
