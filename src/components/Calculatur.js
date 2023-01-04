@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import '../styles/calculator.css';
 import calculate from './logic/calculate';
+
+// eslint-disable-next-line react/prefer-stateless-function
 
 const buttons = [
   { val: 'AC', id: 1 },
@@ -24,25 +26,21 @@ const buttons = [
   { val: '=', id: 19 },
 ];
 
-export default class Calculator extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: '0',
-      next: null,
-      operation: null,
-    };
-  }
+function Calculatur() {
+  const [obj, setObj] = useState({
+    total: '0',
+    next: null,
+    operation: null,
+  });
+  const { total, next, operation } = obj;
 
-  handleClick = (e) => {
+  const handleClick = (e) => {
     const data = e.target.value;
-    const state = calculate(this.state, data);
-    this.setState(state);
+    const result = calculate(obj, data);
+    setObj(result);
   };
-
-  render() {
-    const { total, next, operation } = this.state;
-    return (
+  return (
+    <>
       <div className="container">
         <form>
           {total}
@@ -52,7 +50,7 @@ export default class Calculator extends Component {
         <div className="keypad">
           {buttons.map((btn) => (
             <button
-              onClick={this.handleClick}
+              onClick={handleClick}
               className={`${btn.val === '÷' ? 'orangebg' : 'graybg'} && ${
                 btn.val === '+' ? 'orangebg' : 'graybg'
               }  && ${btn.val === 'x' ? 'orangebg' : 'graybg'} && ${
@@ -69,6 +67,8 @@ export default class Calculator extends Component {
           ))}
         </div>
       </div>
-    );
-  }
+    </>
+  );
 }
+
+export default Calculatur;
